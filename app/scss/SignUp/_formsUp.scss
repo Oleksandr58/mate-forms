@@ -1,0 +1,50 @@
+.wrapper {
+	width: 83.9%;
+	margin: 6.7% auto;
+	margin-bottom: 50px;
+	display: flex;
+	justify-content: space-between;
+	flex-grow: 1;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+.signup {
+	flex-basis: 530px;
+	@include sign(46.8%);
+	&__header {		
+		background-image: url(../img/Sign_Up_Form.jpg);
+
+		@extend %sign__header;	
+
+		&--registered {
+			@extend %sign__header--registered;
+		}
+		
+		&--signup {
+			font-size: 40px;
+		}
+	}
+	
+	@include form(signup, 86%);
+}
+
+.signin {
+	flex-basis: 530px;
+	@include sign(46.8%);
+	&__header {
+		background-image: url(../img/Sign_In_Form.jpg);
+		
+		@extend %sign__header;	
+
+		&--registered {
+			@extend %sign__header--registered;
+		}
+		
+		&--signin {
+			font-size: 40px;
+		}
+	}
+
+	@include form(signin, 86%);
+}

@@ -1,0 +1,255 @@
+.wrapper__small {
+    width: 83.9%;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	display: flex;
+    justify-content: space-between;
+}
+
+
+.smallup {
+
+    @include sign(30.2%);
+
+    &__header {
+        
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        position: relative;
+
+		&--registered {
+            position: absolute;
+            top: 0;
+            right: 4.8%;   
+            font-size: 16px;        
+            font-family: $font-face;            
+            color: #65abd0;	
+		}
+		
+		&--signup {
+            position: absolute;
+            top: 0;
+            left: 7%;		
+            font-size: 20px;
+            font-family: $font-face;
+            font-weight: bold;
+        }    
+        
+    }
+
+    &__btncontainer {
+        margin-top: -20px;
+        margin-bottom: 40px;
+    }
+	
+    @include form(signup, 79%);
+    
+    &__form {
+        &--password {
+            margin-bottom: 17px;
+        }
+        
+        &--forgot {
+            font-size: 16px;
+        }
+
+        &--signupbtn {
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        &--facebookbtn {
+            font-size: 16px;
+            height: 42px;
+        }
+        &--twitterbtn {
+            font-size: 16px;            
+            height: 42px;
+        }
+    }
+}
+
+.smallin {
+
+    @include sign(30.2%);
+
+    &__header {
+        
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        position: relative;
+
+		&--registered {
+            position: absolute;
+            top: 0;
+            right: 4.8%;   
+            font-size: 16px;        
+            font-family: $font-face;            
+            color: #65abd0;	
+		}
+		
+		&--signin {
+            position: absolute;
+            top: 0;
+            left: 7%;		
+            font-size: 20px;
+            font-family: $font-face;
+            font-weight: bold;
+        }    
+        
+    }
+
+    &__btncontainer {
+        margin-top: -20px;
+        margin-bottom: 40px;
+    }
+	
+    @include form(signin, 79%);
+    
+    &__form {
+        &--login {
+            background-image: url(../img/Login_black.jpg);   
+            color: black;
+            &::placeholder  {
+                color: black;
+            }
+        }
+
+        &--password {
+            background-image: url(../img/Password_black.jpg);   
+            margin-bottom: 17px;
+            color: black;
+            &::placeholder  {
+                color: black;
+            }
+        }        
+        &--label {
+            margin-top: 0;
+            font-size: 16px;
+            i::before {
+                width: 18px;
+                height: 18px;
+            }
+        }
+        &--checkbox:checked + i:before {
+            line-height: 19px;
+        }
+            
+
+        &--signinbtn {
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        &--facebookbtn {
+            font-size: 16px;
+            height: 42px;
+        }
+        &--twitterbtn {
+            font-size: 16px;            
+            height: 42px;
+        }
+    }
+}
+
+.wrapper__smallest {
+    width: 30.2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reset {
+    @include sign(100%);
+    
+
+    &__header {
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        position: relative;
+
+		&--signin {
+            position: absolute;
+            top: 0;
+            right: 4.8%;   
+            font-size: 16px;        
+            font-family: $font-face;            
+            color: #65abd0;	
+		}
+		
+		&--reset {
+            position: absolute;
+            top: 0;
+            left: 7%;		
+            font-size: 20px;
+            font-family: $font-face;
+            font-weight: bold;
+        }    
+    }
+
+    &__form {
+        width: 79%;
+        margin: 0 auto;
+
+        &--login {
+            background-image: url(../img/Login.jpg);   
+            @extend %input__form;
+        }
+
+        &--btn {
+            @include button($red, 100%);
+            margin-top: 24px;
+            margin-bottom: 40px;
+            height: 54px;
+        }
+    }
+}
+
+.subscribing {
+    @include sign(100%);
+
+    &__header {
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        position: relative;
+		
+		&--subscribing {
+            position: absolute;
+            top: 0;
+            left: 7%;		
+            font-size: 20px;
+            font-family: $font-face;
+            font-weight: bold;
+        }    
+    }
+
+    &__form {
+        width: 79%;
+        margin: 0 auto;
+
+        &--login {
+            background-image: url(../img/Login.jpg);   
+            @extend %input__form;
+            width: calc(76% - 100px);
+            margin-top: 0px;
+            height: 48px;
+        }
+
+        &--btn {
+            @include button($yellow, 18%);
+            margin-bottom: 40px;      }
+            margin-top: 0;
+    }
+
+    &__text {
+        width: 79%;
+        font-family: $font-face;
+        font-size: 16px;
+        color: $grey-text;
+        margin: 0 auto;
+        margin-top: 60px;
+        margin-bottom: 17px; 
+    }
+}

@@ -1,0 +1,122 @@
+.contact {	
+	@include sign(65%);
+
+	&__form {
+		width: 90%;
+		margin: 0 auto;
+	}
+	&__personal, &__other {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__personal {
+		margin-top: 67px;
+	}
+	&__other {
+		margin-top: 26px;
+		margin-bottom: 26px;
+	}
+	&__contact {
+		position: absolute;
+		top: 20px;
+		left: 25px;		
+		font-size: 20px;
+		font-family: $font-face;
+		font-weight: bold;
+	}  
+
+	&__name, &__email, &__subject, &__budget {
+		width: 270px;
+	}
+
+	&__name, &__email, &__subject, &__budget, &__message {
+		&--input{
+			@extend %input__form;
+			width: calc(100% - 10px);
+			padding: 0;
+			padding-left: 10px;
+			margin: 0;
+			color: black;			
+			margin-top: 11px;
+		}
+	}
+	&__budget--input {
+		background-color: $blue-light;
+		color: white;
+	}
+	&__message--input {
+		padding-top: 10px;
+		width: 100%;
+		height: 132px;
+		margin-bottom: 26px;
+	}
+	&__text {
+		font-family: $font-face;
+		font-size: 16px;
+		font-weight: bold;
+		color: $grey-text;
+	}
+	&__copy {
+			user-select: none;
+			margin-top: 14px;
+			font-style: $font-face;
+			font-weight: bold;
+			font-size: 16px;
+			color: #b4bbc2;			  
+			float: left;
+			padding-left: 25px;			
+			display: inline-block;
+			position: relative;
+
+			i::before {
+				content: "";
+				display: inline-block;
+				position: absolute;
+				top: -2px;
+				left: 0;
+				width: 19px;
+				height: 19px;
+				border-radius: 7px;
+				background-color: $green;
+		}
+
+		&--checkbox {
+			display: none;
+
+			&:checked + i:before {
+				content: '\2713';
+				color: white;
+				text-align: center;
+				border-color: #24aa98;
+				font-weight: 600;
+				font-size: 11px;
+				border-radius: 6px;
+				background-color: #24aa98;
+				line-height: 18px;
+			}			
+		}
+	}
+	&__btn {
+		@include button($green, 135px);
+		float: right;
+		margin-bottom: 26px;
+	}
+}
+
+.minicontact {
+	@include sign(30.2%);
+
+	&__form {
+		width: 79%;
+		margin: 0 auto;
+	}
+	&__message--input {
+		width: 260px;
+	}
+	&__name {
+		margin-top: 67px;
+	}
+	&__name, &__email {
+		margin-bottom: 26px;
+	}
+}

@@ -1,0 +1,307 @@
+//variables
+
+$blue-light: #65abd0;
+$blue-dark: #3162a2;
+$green: #24aa98;
+$red: #db7560;
+$yellow: #d9c26c;
+$grey: #f2f5f8;
+$grey-text: #c6ccd2;
+$font-face: Cabin;
+
+//placeholders
+
+%sign__header {
+	height: 164px;
+	color: white;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: $font-face;
+	background-position: center bottom -71px;
+	box-shadow:0 0 0 128px rgba(0, 0, 0, 0.4) inset;
+	border-top-left-radius: inherit;
+	border-top-right-radius: inherit;
+}
+
+%sign__header--registered {
+	position: absolute;
+	top: 13%;
+	right: 4.2%;
+	font-size: 16px;
+}
+
+%input__form {
+	background-repeat: no-repeat;   
+	background-position: 15px; 
+	background-position-y: 45%;
+	
+	font-family: $font-face;
+	font-size: 16px;
+	font-weight: bold;
+	color: $grey-text;
+	height: 51px;
+	border-radius: 7px;
+	margin-left: -2px;
+	padding: 0 50px;
+	width: calc(100% - 100px);
+	box-sizing: inherit;
+	margin-top: 37px;
+	border: $grey-text 2px solid;
+	outline: none;
+
+	&::placeholder  {
+		font-family: $font-face;
+		margin-top: 15px;
+		font-weight: bold;
+		font-size: 16px;
+		color: $grey-text;
+	}
+}
+
+
+//mixins 
+@mixin sign($width) {
+	width: $width;
+	background-color: $grey;
+	border-radius: 6px;
+}
+
+@mixin button($bg-color, $width){
+	width: $width;
+	height: 52px;
+	border-radius: 7px;
+	border: none;
+	background-color: $bg-color;
+	color: white; 
+	font-style: $font-face;
+	font-size: 20px;
+	outline: none;
+}
+
+@mixin form($sign, $width) {
+	@if ($sign == signup) {
+		&__form {
+			width: $width;
+			margin: 0 auto;
+			text-align: center;
+	
+			&--login {
+				background-image: url(../img/Login.jpg);   
+				
+				@extend %input__form;
+			}
+	
+			&--password {
+				background-image: url(../img/Password.jpg);   
+				
+				@extend %input__form;
+				margin-top: 25px;			
+				margin-bottom: 14px;
+			}
+	
+			&--forgot {
+				font-style: $font-face;
+				font-weight: bold;
+				font-size: 18px;
+				color: #b4bbc2;			
+			}
+	
+			&--signupbtn {
+				@include button($blue-light, 100%);
+				height: 55px;
+				margin: 24px 0;
+			}
+	
+			&--or {
+				overflow: hidden;
+				width: 100%;
+				height: 52px;
+				margin: 0 auto;
+				font-family: $font-face;
+				font-size: 16px;
+				font-weight: bold;
+				color:  $grey-text;
+			
+				&::before, &::after {
+					content: '';
+					
+					/* делаем линию строчно-блочной */
+					display: inline-block;
+					
+					/* выравниваем вертикально по середине */
+					vertical-align: middle;
+					
+					/* не позволяем ширине превысить 100% (будет добавлен бордюр) */
+					box-sizing: border-box;
+					
+					/* установка ширины в 100% делает линию равной ширине тега заголовка
+					** благодаря этому линия заполнит все свободное пространство
+					** слева и справа от текста
+					*/
+					width: 100%;
+					height: 2px;
+					background: $grey-text;
+					
+					/* добавляем к линии левый и правый бордюр цветом основного фона заголовка
+					** благодаря этому создается нужный отступ между линиями и текстом
+					*/
+					border: solid $grey;
+					border-width: 0 10px;
+				}
+				
+				&::before {
+					margin-left: -100%;
+				}
+	
+				&::after {
+					margin-right: -100%;
+				}
+			}
+	
+			&--facebookbtn {
+				@include button($blue-dark, 47%);
+			}
+	
+			&--twitterbtn {
+				@include button($blue-light, 47%);
+			}
+		}
+	
+		&__btncontainer {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	@else if ($sign == signin) {
+		&__form {
+			width: $width;
+			margin: 0 auto;
+			text-align: center;
+
+			&--login {
+				background-image: url(../img/Login.jpg);   
+				
+				@extend %input__form;
+			}
+
+			&--password {
+				background-image: url(../img/Password.jpg);   
+				
+				@extend %input__form;
+				margin-top: 25px;
+			}
+
+			&--label {
+				user-select: none;
+				margin-top: 14px;
+				font-style: $font-face;
+				font-weight: bold;
+				font-size: 18px;
+				color: #b4bbc2;			  
+				float: left;
+				padding-left: 25px;			
+				display: inline-block;
+				position: relative;
+
+				i::before {
+					content: "";
+					display: inline-block;
+					position: absolute;
+					top: -1px;
+					left: 0;
+					width: 20px;
+					height: 20px;
+					border-radius: 7px;
+					background-color: $green;
+				}
+
+			}
+
+			
+			&--checkbox {
+					display: none;
+
+				&:checked + i:before {
+					content: '\2713';
+					color: white;
+					text-align: center;
+					border-color: #24aa98;
+					font-weight: 600;
+					font-size: 13px;
+					border-radius: 6px;
+					background-color: #24aa98;
+					line-height: 22px;
+				}
+					
+			}
+
+			&--signinbtn {
+				@include button($green, 100%);
+				height: 55px;
+				margin: 24px 0;
+			}
+
+			&--or {
+				overflow: hidden;
+				width: 100%;
+				height: 52px;
+				margin: 0 auto;
+				font-family: $font-face;
+				font-size: 16px;
+				font-weight: bold;
+				color:  $grey-text;
+			
+				&::before, &::after {
+					content: '';
+					
+					/* делаем линию строчно-блочной */
+					display: inline-block;
+					
+					/* выравниваем вертикально по середине */
+					vertical-align: middle;
+					
+					/* не позволяем ширине превысить 100% (будет добавлен бордюр) */
+					box-sizing: border-box;
+					
+					/* установка ширины в 100% делает линию равной ширине тега заголовка
+					** благодаря этому линия заполнит все свободное пространство
+					** слева и справа от текста
+					*/
+					width: 100%;
+					height: 2px;
+					background: $grey-text;
+					
+					/* добавляем к линии левый и правый бордюр цветом основного фона заголовка
+					** благодаря этому создается нужный отступ между линиями и текстом
+					*/
+					border: solid $grey;
+					border-width: 0 10px;
+				}
+				
+				&::before {
+					margin-left: -100%;
+				}
+
+				&::after {
+					margin-right: -100%;
+				}
+			}
+
+			&--facebookbtn {
+				@include button($blue-dark, 47%)
+			}
+
+			&--twitterbtn {
+				@include button($blue-light, 47%)
+			}
+		}
+
+		&__btncontainer {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 24px;
+		}
+	}
+}

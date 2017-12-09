@@ -3,41 +3,45 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">    
-    <link type="text/css" href="css/style.css" rel="stylesheet" media="screen">
+    <link type="text/css" href="css/main.css" rel="stylesheet" media="screen">
   </head>
   
   <body>
-	  <section class="signUp">
-      <div class="signUp__header">
-        <span class="signUp__header--registered">Already registered?</span>
-        <span class="signUp__header--signUp">SIGN UP</span>
-      </div>
-      <form class="signUp__form">
-        <input class="signUp__form--login" type="email" placeholder="E-mail or login">
-        <input class="signUp__form--password" type="password" placeholder="Password">
-        <span class="signUp__form--forgot">Forgot password?</span>
-        <button class="signUp__form--signUpBtn" type="submit">Sign Up</button>
-        <div class="signUp__form--or">OR</div>
-        <button class="signUp__form--facebookBtn" type="submit">Login via Facebook</button>
-        <button class="signUp__form--twitterBtn" type="submit">Login via Twitter</button>
-      </form>
-    </section>
+    <div class="wrapper">
+    
+      <section class="signup">
+        <header class="signup__header">
+          <span class="signup__header--registered">Already registered?</span>
+          <span class="signup__header--signup">SIGN UP</span>
+        </header>
+        <form class="signup__form">
+          <input class="signup__form--login" type="email" placeholder="E-mail or login">
+          <input class="signup__form--password" type="password" placeholder="Password">
+          <span class="signup__form--forgot">Forgot password?</span>
+          <button class="signup__form--signupBtn" type="submit">Sign Up</button>
+          <div class="signup__form--or">OR</div>
+          <button class="signup__form--facebookBtn" type="submit">Login via Facebook</button>
+          <button class="signup__form--twitterBtn" type="submit">Login via Twitter</button>
+        </form>
+      </section>
 
-    <section class="signIn">
-      <div class="signIn__header">
-        <span class="signIn__header--registered">Already registered?</span>
-        <span class="signIn__header--signUp">SIGN IN</span>
-      </div>
-      <form class="signIn__form">
-        <input class="signIn__form--login" type="email" placeholder="E-mail or login">
-        <input class="signIn__form--password" type="password" placeholder="Password">
-        <input class="signIn__form--rememberInput" type="checkbox">
-        <label class="signIn__form--rememberText">Remember password?</label>
-        <button class="signIn__form--signInBtn" type="submit">Sign In</button>
-        <div class="signIn__form--or">OR</div>
-        <button class="signIn__form--facebookBtn" type="submit">Login via Facebook</button>
-        <button class="signIn__form--twitterBtn" type="submit">Login via Twitter</button>
-      </form>
-    </section>
+      <section class="signin">
+        <div class="in__wrapper">
+          <span class="signIn__header--registered">Already registered?</span>
+          <span class="signIn__header--signup">SIGN IN</span>
+        </div>
+        <form class="signIn__form">
+          <input class="signIn__form--login" type="email" placeholder="E-mail or login">
+          <input class="signIn__form--password" type="password" placeholder="Password">
+          <input class="signIn__form--rememberInput" type="checkbox">
+          <label class="signIn__form--rememberText">Remember password?</label>
+          <button class="signIn__form--signInBtn" type="submit">Sign In</button>
+          <div class="signIn__form--or">OR</div>
+          <button class="signIn__form--facebookBtn" type="submit">Login via Facebook</button>
+          <button class="signIn__form--twitterBtn" type="submit">Login via Twitter</button>
+        </form>
+      </section>
+
+    </div>
   </body>
   <html>

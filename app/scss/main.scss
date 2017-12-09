@@ -1,7 +1,12 @@
 // Base import
 
 @import "reset";
+@import "arguments";
 
 // My style import
 
-@import "style";
+@import "SignUp/formsUp";
+@import "SignUp/formsDown";
+
+@import "SignMedium/formsUp";
+@import "SignMedium/formsDown";
