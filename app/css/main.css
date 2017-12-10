@@ -1045,6 +1045,22 @@ table {
       .cart__form--color .cart__color--blue:before {
         background-color: #65abd0;
         left: 33px; }
+      .cart__form--color .cart__color--green:before {
+        background-color: #24aa98;
+        left: -webkit-calc(33px + 25px);
+        left: calc(33px + 25px); }
+      .cart__form--color .cart__color--red:before {
+        background-color: #db7560;
+        left: -webkit-calc(33px + 2 * 25px);
+        left: calc(33px + 2 * 25px); }
+      .cart__form--color .cart__color--brown:before {
+        background-color: #865447; }
+      .cart__form--color .cart__color--black:before {
+        background-color: #383737;
+        left: -webkit-calc(33px + 3 * 25px);
+        left: calc(33px + 3 * 25px); }
+      .cart__form--color .shoes__color--brown:before {
+        left: 33px; }
     .cart__form--yellow {
       display: none; }
       .cart__form--yellow:checked + .cart__color--yellow:before {
@@ -1057,6 +1073,42 @@ table {
     .cart__form--blue {
       display: none; }
       .cart__form--blue:checked + .cart__color--blue:before {
+        content: '\2713';
+        color: white;
+        text-align: center;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 18px; }
+    .cart__form--green {
+      display: none; }
+      .cart__form--green:checked + .cart__color--green:before {
+        content: '\2713';
+        color: white;
+        text-align: center;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 18px; }
+    .cart__form--red {
+      display: none; }
+      .cart__form--red:checked + .cart__color--red:before {
+        content: '\2713';
+        color: white;
+        text-align: center;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 18px; }
+    .cart__form--brown {
+      display: none; }
+      .cart__form--brown:checked + .cart__color--brown:before {
+        content: '\2713';
+        color: white;
+        text-align: center;
+        font-weight: 600;
+        font-size: 11px;
+        line-height: 18px; }
+    .cart__form--black {
+      display: none; }
+      .cart__form--black:checked + .cart__color--black:before {
         content: '\2713';
         color: white;
         text-align: center;

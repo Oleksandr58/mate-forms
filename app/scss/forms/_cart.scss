@@ -85,6 +85,29 @@
                 background-color: $item-blue;
                 left: 33px;
             }
+
+            .cart__color--green:before {        
+                background-color: $item-green;
+                left: calc(33px + 25px);
+            }
+
+            .cart__color--red:before {        
+                background-color: $item-red;
+                left: calc(33px + 2 * 25px);
+            }
+
+            .cart__color--brown:before {        
+                background-color: $item-brown;
+            }
+
+            .cart__color--black:before {        
+                background-color: $item-black;
+                left: calc(33px + 3 * 25px);
+            }
+
+            .shoes__color--brown:before {
+                left: 33px;
+            }
         }
 
         &--yellow {
@@ -113,6 +136,58 @@
             }
         }
 
+        &--green {
+            display: none;
+
+            &:checked + .cart__color--green:before {
+                content: '\2713';
+                color: white;
+                text-align: center;
+                font-weight: 600;
+                font-size: 11px;
+                line-height: 18px;
+            }
+        }
+
+        &--red {
+            display: none;
+
+            &:checked + .cart__color--red:before {
+                content: '\2713';
+                color: white;
+                text-align: center;
+                font-weight: 600;
+                font-size: 11px;
+                line-height: 18px;
+            }
+        }
+
+        &--brown {
+            display: none;
+
+            &:checked + .cart__color--brown:before {
+                content: '\2713';
+                color: white;
+                text-align: center;
+                font-weight: 600;
+                font-size: 11px;
+                line-height: 18px;
+            }
+        }
+
+        &--black {
+            display: none;
+
+            &:checked + .cart__color--black:before {
+                content: '\2713';
+                color: white;
+                text-align: center;
+                font-weight: 600;
+                font-size: 11px;
+                line-height: 18px;
+            }
+        }
+        
         &--caption {
             color: $cart-text;
             font-size: 16px;

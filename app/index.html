@@ -196,7 +196,7 @@
               <div class="cart__total cart__text--main">Total</div>
             </div>
 
-            <div class="cart__line">
+            <div class="cart__line cart__line--bag">
                 <figure class="cart__item cart__text">
                   <img class="cart__item--photo" src="img/Leather bag.png">
                   <figcaption class="cart__item--caption">
@@ -205,14 +205,14 @@
                 </figure>
                 <div class="cart__price cart__text">&#36;199</div>
                 <div class="cart__quantity">
-                  <button class="cart__quantity--minus">-</button>
-                  <div class="cart__quantity--sum cart__text">1</div>
-                  <button class="cart__quantity--plus">+</button>
+                  <button class="cart__quantity--minus" id="bag-minus">-</button>
+                  <div class="cart__quantity--sum cart__text" id="bag-quantity">1</div>
+                  <button class="cart__quantity--plus" id="bag-plus">+</button>
                 </div>
-                <div class="cart__total cart__text">&#36;199</div>
+                <div class="cart__total cart__text" id="bag-total">&#36;199</div>
             </div>
 
-            <div class="cart__line">
+            <div class="cart__line cart__line--belt">
                 <figure class="cart__item cart__text">
                   <img class="cart__item--photo" src="img/Leather belt.png">
                   <figcaption class="cart__item--caption">
@@ -220,22 +220,25 @@
                     <form class="cart__form">                      
                     <span class="cart__form--caption">Color :</span>
                       <label class="cart__form--color">
-                            <input class="cart__form--yellow" id="yellow" type="checkbox"><i for="yellow" class="cart__color--yellow"></i>
-                            <input class="cart__form--blue" id="blue" type="checkbox"><i for="blue" class="cart__color--blue"></i>
+                        <label><input class="cart__form--yellow" name="item-color"  type="checkbox"><i class="cart__color--yellow"></i></label>
+                        <label><input class="cart__form--blue" name="item-color" type="checkbox"><i class="cart__color--blue"></i></label>
+                        <label><input class="cart__form--green" name="item-color"  type="checkbox"><i class="cart__color--green"></i></label>
+                        <label><input class="cart__form--red" name="item-color" type="checkbox"><i class="cart__color--red"></i></label>
+                        <label><input class="cart__form--black" name="item-color"  type="checkbox"><i class="cart__color--black"></i></label>
                       </label>
                     </form>
                   </figcaption>
                 </figure>
                 <div class="cart__price cart__text">&#36;49</div>
                 <div class="cart__quantity">
-                  <button class="cart__quantity--minus">-</button>
-                  <div class="cart__quantity--sum cart__text">1</div>
-                  <button class="cart__quantity--plus">+</button>
+                  <button class="cart__quantity--minus" id="belt-minus">-</button>
+                  <div class="cart__quantity--sum cart__text" id="belt-quantity">1</div>
+                  <button class="cart__quantity--plus" id="belt-plus">+</button>
                 </div>
-                <div class="cart__total cart__text">&#36;49</div>
+                <div class="cart__total cart__text" id="belt-total">&#36;49</div>
             </div>
 
-            <div class="cart__line">
+            <div class="cart__line cart__line--shoes">
                 <figure class="cart__item cart__text">
                   <img class="cart__item--photo" src="img/Leather shoes.png">
                   <figcaption class="cart__item--caption">
@@ -243,29 +246,31 @@
                     <form class="cart__form">                      
                     <span class="cart__form--caption">Color :</span>
                       <label class="cart__form--color">
-                            <input class="cart__form--yellow" id="yellow" type="checkbox"><i for="yellow" class="cart__color--yellow"></i>
-                            <input class="cart__form--blue" id="blue" type="checkbox"><i for="blue" class="cart__color--blue"></i>
+                            <label><input class="cart__form--brown" name="item-color"  type="checkbox"><i class="cart__color--brown"></i></label>
+                            <label><input class="cart__form--black" name="item-color" type="checkbox"><i class="cart__color--black shoes__color--brown"></i></label>
                       </label>
                     </form>
                   </figcaption>
                 </figure>
                 <div class="cart__price cart__text">&#36;199</div>
                 <div class="cart__quantity">
-                  <button class="cart__quantity--minus">-</button>
-                  <div class="cart__quantity--sum cart__text">1</div>
-                  <button class="cart__quantity--plus">+</button>
+                  <button class="cart__quantity--minus" id="shoes-minus">-</button>
+                  <div class="cart__quantity--sum cart__text" id="shoes-quantity">1</div>
+                  <button class="cart__quantity--plus" id="shoes-plus">+</button>
                 </div>
-                <div class="cart__total cart__text">&#36;199</div>
+                <div class="cart__total cart__text" id="shoes-total">&#36;199</div>
             </div>
 
             <div class="cart__subtotal">
               <span class="cart__subtotal--text cart__text">Subtotal:</span>
-              <span class="cart__subtotal--price cart__text">&#36;496</span>
+              <span class="cart__subtotal--price cart__text" id="subtotal">&#36;496</span>
             </div>
             <footer class="cart__footer">
                <span class="cart__footer--continue cart__text"><i class="fa fa-angle-left"></i>&nbsp;&nbsp;&nbsp;Continue Shopping</span>
                <button class="cart__footer--btn cart__text">Order&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></button>
             </footer>
         </div>
+
+        <script src="js/script.js"></script>
   </body>
   <html>

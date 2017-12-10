@@ -11,7 +11,9 @@ var gulp        = require('gulp'),
 
 gulp.task('scss', function() {
 	return gulp.src('app/scss/main.scss')
-	.pipe(scss())
+	.pipe(scss().on( 'error', function( error )
+      {console.log( error );} )
+	)
 	.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade:true}))
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream: true}));
