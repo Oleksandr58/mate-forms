@@ -43,6 +43,18 @@
 	&__budget--input {
 		background-color: $blue-light;
 		color: white;
+		appearance: none;		
+	}
+	&__budget {		
+		position: relative;
+		i {
+			pointer-events: none;
+			position: absolute;
+			right: 10px;
+			top: 55%;
+			font-size: 20px;			
+			color: white;			
+		}
 	}
 	&__message--input {
 		padding-top: 10px;

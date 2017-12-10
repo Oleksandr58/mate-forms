@@ -1,0 +1,196 @@
+.cart {
+    @include sign(83.9%);
+
+    &__text {
+        font-family: $font-face;
+        font-size: 18px;
+        color: black;
+        font-weight: bold;
+        vertical-align: middle;
+
+        &--main {
+            font-size: 16px;
+            color: $cart-text;
+            font-weight: normal;
+        }
+    }
+
+    &__line {
+        width: 87.8%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 60px;
+        padding-right: 20px;
+        padding-bottom: 14px;
+        padding-top: 13px;
+        border-bottom: solid 2px $grey-text;
+    }
+
+    &__main {        
+        padding-top: 70px;
+    }
+
+    &__cart {
+        position: absolute;
+		top: 20px;
+		left: 25px;		
+		font-size: 20px;
+		font-family: $font-face;
+		font-weight: bold;
+    }
+
+    &__item {
+        flex-basis: 448px;
+        text-align: left;
+        display: flex;
+        align-items: center;
+
+        &--main {
+            padding-left: 98px;
+            flex-basis: 350px;
+        }
+
+        &--photo {
+            margin-right: 20px;
+        }
+    }
+
+    &__form {
+
+        position: relative;
+        margin-top: 10px;
+
+        &--color {
+            user-select: none;
+            position: relative;
+
+            i::before {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top: 2px;
+                left: 8px;
+                width: 17px;
+                height: 17px;
+                border-radius: 50%;
+            }
+
+            .cart__color--yellow:before {        
+                background-color: $item-yellow;
+            }
+            
+            .cart__color--blue:before {        
+                background-color: $item-blue;
+                left: 33px;
+            }
+        }
+
+        &--yellow {
+            display: none;
+
+            &:checked + .cart__color--yellow:before {
+                content: '\2713';
+                color: white;
+                text-align: center;
+                font-weight: 600;
+                font-size: 11px;
+                line-height: 18px;
+            }
+        }
+
+        &--blue {
+            display: none;
+
+            &:checked + .cart__color--blue:before {
+                content: '\2713';
+                color: white;
+                text-align: center;
+                font-weight: 600;
+                font-size: 11px;
+                line-height: 18px;
+            }
+        }
+
+        &--caption {
+            color: $cart-text;
+            font-size: 16px;
+        }
+
+    }
+
+    &__price {
+        flex-basis: 45px;
+        text-align: left;
+    }
+    &__quantity {
+        flex-basis: 78px;
+        text-align: center;
+
+        &--minus {
+            @include button($item-red, 25px);
+            height: 25px;
+        }
+
+        &--plus {
+            @include button($item-green, 25px);
+            height: 25px;
+        }
+        &--sum {
+            display: inline-block;
+            width: 18px;
+            padding-bottom: 5px;
+        }
+    }
+
+    &__total {
+        flex-basis: 30px;
+        text-align: right;
+    }
+
+    &__subtotal {        
+        width: 87.8%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-end;
+        padding-left: 60px;
+        padding-right: 100px;
+        padding-bottom: 14px;
+        padding-top: 26px;
+        position: relative;
+
+        &--text {
+            color: $cart-text;
+            font-size: 16px;
+        }
+
+        &--price {
+            position: absolute;
+            right: 48px;
+            top: 23px;
+        }
+    }
+
+    &__footer {           
+        padding-top: 16px;
+        padding-bottom: 30px;        
+        padding-right: 20px;
+        padding-left: 60px;
+        width: 92%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        &--continue {
+            color: $blue-light;
+            font-weight: normal;
+        }
+
+        &--btn {
+            @include button($green, 157px);
+            height: 48px;
+            color: white;
+        }
+    }
+}

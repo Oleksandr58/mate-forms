@@ -7,7 +7,15 @@ $red: #db7560;
 $yellow: #d9c26c;
 $grey: #f2f5f8;
 $grey-text: #c6ccd2;
+$cart-text: #b4bbc2;
 $font-face: Cabin;
+
+$item-yellow: #d9c26c;
+$item-blue: #65abd0;
+$item-green: #24aa98;
+$item-red: #db7560;
+$item-brown: #865447;
+$item-black: #383737;
 
 //placeholders
 
@@ -214,7 +222,7 @@ $font-face: Cabin;
 					width: 20px;
 					height: 20px;
 					border-radius: 7px;
-					background-color: $green;
+					background-color: #24aa98;
 				}
 
 			}
@@ -227,11 +235,8 @@ $font-face: Cabin;
 					content: '\2713';
 					color: white;
 					text-align: center;
-					border-color: #24aa98;
 					font-weight: 600;
 					font-size: 13px;
-					border-radius: 6px;
-					background-color: #24aa98;
 					line-height: 22px;
 				}
 					
