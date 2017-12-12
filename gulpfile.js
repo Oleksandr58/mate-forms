@@ -66,6 +66,9 @@ gulp.task('build', ['clean', 'scss', 'img'], function() {
 	
 	var buildJs = gulp.src('app/js/**/*')
 	.pipe(gulp.dest('dist/js'));
+
+	 var buildFontAwesome = gulp.src('app/font-awesome/**/*') // Переносим шрифты в продакшен
+    .pipe(gulp.dest('dist/font-awesome'))
 	
 	
 });

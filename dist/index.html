@@ -2,46 +2,423 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">   
+    <link type="text/css" href="font-awesome/css/font-awesome.min.css" rel="stylesheet"> 
     <link type="text/css" href="css/main.css" rel="stylesheet" media="screen">
   </head>
   
   <body>
-    <div class="wrapper">
+    <div class="wrapper sign__big">
     
-      <section class="signup">
+      <section class="sign__big signup">
         <header class="signup__header">
-          <span class="signup__header--registered">Already registered?</span>
-          <span class="signup__header--signup">SIGN UP</span>
+          <a class="signup__header--registered">Already Registered?</a>
+          <a class="signup__header--signup">SIGN UP</a>
         </header>
         <form class="signup__form">
           <input class="signup__form--login" type="email" placeholder="E-mail or login">
           <input class="signup__form--password" type="password" placeholder="Password">
-          <span class="signup__form--forgot">Forgot password?</span>
-          <button class="signup__form--signupBtn" type="submit">Sign Up</button>
+          <a class="signup__form--forgot">Forgot password?</a>
+          <button class="signup__form--signupbtn" type="submit">Sign Up</button>
           <div class="signup__form--or">OR</div>
-          <button class="signup__form--facebookBtn" type="submit">Login via Facebook</button>
-          <button class="signup__form--twitterBtn" type="submit">Login via Twitter</button>
+          <div class="signup__btncontainer">
+            <button class="signup__form--facebookbtn" type="submit">Login via Facebook</button>
+            <button class="signup__form--twitterbtn" type="submit">Login via Twitter</button>
+         </div>
         </form>
       </section>
 
-      <section class="signin">
-        <div class="in__wrapper">
-          <span class="signIn__header--registered">Already registered?</span>
-          <span class="signIn__header--signup">SIGN IN</span>
-        </div>
-        <form class="signIn__form">
-          <input class="signIn__form--login" type="email" placeholder="E-mail or login">
-          <input class="signIn__form--password" type="password" placeholder="Password">
-          <input class="signIn__form--rememberInput" type="checkbox">
-          <label class="signIn__form--rememberText">Remember password?</label>
-          <button class="signIn__form--signInBtn" type="submit">Sign In</button>
-          <div class="signIn__form--or">OR</div>
-          <button class="signIn__form--facebookBtn" type="submit">Login via Facebook</button>
-          <button class="signIn__form--twitterBtn" type="submit">Login via Twitter</button>
-        </form>
-      </section>
+      <section class="sign__big signin">
+          <header class="signin__header">
+            <a class="signin__header--registered">Create an Account?</a>
+            <a class="signin__header--signin">SIGN IN</a>
+          </header>
+          <form class="signin__form">
+            <input class="signin__form--login" type="email" placeholder="E-mail or login">
+            <input class="signin__form--password" type="password" placeholder="Password">
+              <label class="signin__form--label">
+                <input class="signin__form--checkbox" type="checkbox">Remember password?<i></i>
+              </label>
+            <button class="signin__form--signinbtn" type="submit">Sign In</button>
+            <div class="signin__form--or">OR</div>
+            <div class="signin__btncontainer">
+              <button class="signin__form--facebookbtn" type="submit">Login via Facebook</button>
+              <button class="signin__form--twitterbtn" type="submit">Login via Twitter</button>
+           </div>
+          </form>
+        </section>
 
     </div>
+
+    <div class="wrapper wrapper__small">
+        
+          <section class="smallup">
+            <header class="smallup__header">
+              <a class="smallup__header--signup">SIGN UP</a>
+              <a class="smallup__header--registered">Already Registered?</a>
+            </header>
+            <form class="smallup__form">
+              <input class="smallup__form--login" type="email" placeholder="E-mail or login">
+              <input class="smallup__form--password" type="password" placeholder="Password">
+              <a class="smallup__form--forgot">Forgot password?</a>
+              <button class="smallup__form--signupbtn" type="submit">Sign Up</button>
+              <div class="smallup__form--or">OR</div>
+              <div class="smallup__btncontainer">
+                <button class="smallup__form--facebookbtn" type="submit">
+                    <i class="fa fa-facebook"></i>&nbsp;Facebook
+                </button>
+                <button class="smallup__form--twitterbtn" type="submit">
+                  <i class="fa fa-twitter"></i>&nbsp;Twitter
+                </button>
+             </div>
+            </form>
+          </section>
+    
+          <section class="smallin">
+              <header class="smallin__header">
+                <a class="smallin__header--signin">SIGN IN</a>
+                <a class="smallin__header--registered">Create an Account</a>
+              </header>
+              <form class="smallin__form">
+                <input class="smallin__form--login" type="email" placeholder="E-mail or login">
+                <input class="smallin__form--password" type="password" placeholder="Password">
+                  <label class="smallin__form--label">
+                    <input class="smallin__form--checkbox" type="checkbox">Remember password?<i></i>
+                  </label>
+                <button class="smallin__form--signinbtn" type="submit">Sign In</button>
+                <div class="smallin__form--or">OR</div>
+                <div class="smallin__btncontainer">
+                    <button class="smallup__form--facebookbtn" type="submit">
+                        <i class="fa fa-facebook"></i>&nbsp;Facebook
+                    </button>
+                    <button class="smallup__form--twitterbtn" type="submit">
+                      <i class="fa fa-twitter"></i>&nbsp;Twitter
+                    </button>
+               </div>
+              </form>
+            </section>
+
+            <div class="wrapper__smallest">                
+              <section class="reset">
+                  <header class="reset__header">
+                      <a class="reset__header--reset">RESET PASSWORD</a>
+                      <a class="reset__header--signin">Sign in</a>
+                  </header>
+                  <form class="reset__form">
+                      <input class="reset__form--login" type="email" placeholder="E-mail">
+                      <button class="reset__form--btn" type="submit">Reset</button>                    
+                  </form>
+                </section>
+
+                <section class="subscribing">
+                    <header class="subscribing__header">
+                        <a class="subscribing__header--subscribing">SUBSCRIBING</a>
+                    </header>          
+                    <p class="subscribing__text">We will never send you spam or some other trash</p>        
+                    <form class="subscribing__form">            
+                        <input class="subscribing__form--login" type="email" placeholder="E-mail">
+                        <button class="subscribing__form--btn" type="submit">
+                            <i class="fa fa-angle-right"></i>
+                        </button>                    
+                    </form>
+                  </section>
+            </div>
+          </div>
+
+            <div class="wrapper">
+              <section class="contact">
+                <span class="contact__contact">CONTACT</span>
+                <form class="contact__form">
+                  <div class="contact__personal">
+                    <div class="contact__name">
+                      <span class="contact__name--text contact__text">Name</span>
+                      <input type="text" class="contact__name--input">
+                    </div>
+                    <div class="contact__email">
+                      <span class="contact__email--text contact__text">E-mail</span>
+                      <input type="email" class="contact__email--input">
+                    </div>
+                  </div>
+                  <div class="contact__other">
+                  <div class="contact__subject">
+                      <span class="contact__subject--text contact__text">Subject</span>
+                      <input type="text" class="contact__subject--input">
+                  </div>
+                  <div class="contact__budget">
+                      <span class="contact__budget--text contact__text">Select Budget</span>
+                      <select name="budget" class="contact__budget--input">
+                        <option value="0-5000">&#36;0 - &#36;5.000</option>
+                        <option value="5000-10000">&#36;5.000 - &#36;10.000</option>
+                        <option selected value="10000-15000">&#36;10.000 - &#36;15.000</option>
+                        <option value="15000-20000">&#36;15.000 - &#36;20.000</option>                        
+                     </select>
+                     <i class="fa fa-angle-down"></i>
+                  </div>
+                </div>
+                  <div class="contact__message">
+                      <span class="contact__message--text contact__text">Message</span>
+                      <textarea name="message" class="contact__message--input"></textarea>
+                  </div>
+                  <label class="contact__copy">
+                      <input class="contact__copy--checkbox" type="checkbox">Send me a copy<i></i>
+                  </label>
+                  <button class="contact__btn">Send</button>
+                </form>
+              </section>
+
+              <section class="minicontact">
+                <form class="minicontact__form">
+                  <div class="minicontact__name">
+                      <span class="contact__name--text contact__text">Name</span>
+                      <input type="text" class="contact__name--input">
+                  </div>
+                  <div class="minicontact__email">
+                      <span class="contact__email--text contact__text">E-mail</span>
+                      <input type="email" class="contact__email--input">
+                  </div>
+                  <div class="minicontact__message">
+                        <span class="contact__message--text contact__text">Message</span>
+                        <textarea name="message" class="contact__message--input minicontact__message--input"></textarea>
+                  </div>
+                  <button class="contact__btn">Send</button>
+                </form>
+              </section>
+        </div>
+
+        <div class="wrapper cart">
+            <span class="cart__cart">CART</span>
+
+            <div class="cart__line cart__main">
+              <div class="cart__item cart__item--main cart__text--main">Item</div>
+              <div class="cart__price cart__text--main">Price</div>
+              <div class="cart__quantity cart__text--main">Quantity</div>
+              <div class="cart__total cart__text--main">Total</div>
+            </div>
+
+            <div class="cart__line cart__line--bag">
+                <figure class="cart__item cart__text">
+                  <img class="cart__item--photo" src="img/Leather bag.png">
+                  <figcaption class="cart__item--caption">
+                    <span class="cart__item--product">Leather bag</span>
+                  </figcaption>
+                </figure>
+                <div class="cart__price cart__text">&#36;199</div>
+                <div class="cart__quantity">
+                  <button class="cart__quantity--minus" id="bag-minus">-</button>
+                  <div class="cart__quantity--sum cart__text" id="bag-quantity">1</div>
+                  <button class="cart__quantity--plus" id="bag-plus">+</button>
+                </div>
+                <div class="cart__total cart__text" id="bag-total">&#36;199</div>
+            </div>
+
+            <div class="cart__line cart__line--belt">
+                <figure class="cart__item cart__text">
+                  <img class="cart__item--photo" src="img/Leather belt.png">
+                  <figcaption class="cart__item--caption">
+                    <span class="cart__item--product">Leather belt</span>
+                    <form class="cart__form">                      
+                    <span class="cart__form--caption">Color :</span>
+                      <label class="cart__form--color">
+                        <label><input class="cart__form--yellow" name="item-color"  type="checkbox"><i class="cart__color--yellow"></i></label>
+                        <label><input checked class="cart__form--blue" name="item-color" type="checkbox"><i class="cart__color--blue"></i></label>
+                        <label><input class="cart__form--green" name="item-color"  type="checkbox"><i class="cart__color--green"></i></label>
+                        <label><input class="cart__form--red" name="item-color" type="checkbox"><i class="cart__color--red"></i></label>
+                        <label><input class="cart__form--black" name="item-color"  type="checkbox"><i class="cart__color--black"></i></label>
+                      </label>
+                    </form>
+                  </figcaption>
+                </figure>
+                <div class="cart__price cart__text">&#36;49</div>
+                <div class="cart__quantity">
+                  <button class="cart__quantity--minus" id="belt-minus">-</button>
+                  <div class="cart__quantity--sum cart__text" id="belt-quantity">1</div>
+                  <button class="cart__quantity--plus" id="belt-plus">+</button>
+                </div>
+                <div class="cart__total cart__text" id="belt-total">&#36;49</div>
+            </div>
+
+            <div class="cart__line cart__line--shoes">
+                <figure class="cart__item cart__text">
+                  <img class="cart__item--photo" src="img/Leather shoes.png">
+                  <figcaption class="cart__item--caption">
+                    <span class="cart__item--product">Leather shoes</span>
+                    <form class="cart__form">                      
+                      <span class="cart__form--caption">Color :</span>
+                        <label class="cart__form--color">
+                              <label><input checked class="cart__form--brown" name="item-color"  type="checkbox">
+                                <i class="cart__color--brown"></i>
+                              </label>
+                              <label><input class="cart__form--black" name="item-color" type="checkbox">
+                                <i class="cart__color--black shoes__color--brown"></i>
+                              </label>
+                        </label>
+                      <span class="cart__form--size">Size :</span>
+                      <select name="size" class="cart__form--select">
+                          <option  value="40">40</option>
+                          <option selected value="42">42</option>
+                          <option value="44">44</option>
+                          <option value="46">46</option>                       
+                       </select>
+                    </form>
+                  </figcaption>
+                </figure>
+                <div class="cart__price cart__text">&#36;199</div>
+                <div class="cart__quantity">
+                  <button class="cart__quantity--minus" id="shoes-minus">-</button>
+                  <div class="cart__quantity--sum cart__text" id="shoes-quantity">1</div>
+                  <button class="cart__quantity--plus" id="shoes-plus">+</button>
+                </div>
+                <div class="cart__total cart__text" id="shoes-total">&#36;199</div>
+            </div>
+
+            <div class="cart__subtotal">
+              <span class="cart__subtotal--text cart__text">Subtotal:</span>
+              <span class="cart__subtotal--price cart__text" id="subtotal">&#36;496</span>
+            </div>
+            <footer class="cart__footer">
+               <span class="cart__footer--continue cart__text"><i class="fa fa-angle-left"></i>&nbsp;&nbsp;&nbsp;Continue Shopping</span>
+               <button class="cart__footer--btn cart__text">Order&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></button>
+            </footer>
+        </div>
+
+        <div class="wrapper shipping">
+          <span class="shipping__shipping">SHIPPING ADDRESS</span>
+
+          <form class="shipping__form">
+            <div class="shipping__line">
+              <div class="shipping__country">
+                <span class="shipping__country--text shipping__text">Select country</span>
+                <select name="country" class="shipping__country--input">
+                  <option value="zimbabwe">Zimbabwe</option>
+                  <option value="ethiopia">Ethiopia</option>      
+                  <option value="ukraine">Ukraine</option>    
+                  <option selected value="usa">USA</option>             
+               </select>
+               <i class="fa fa-angle-down"></i>
+              </div>
+              <div class="shipping__region">
+                <span class="shipping__region--text shipping__text">State, Region, Province</span>
+                <input type="text" class="shipping__region--input">
+              </div>
+              <div class="shipping__address1">
+                <span class="shipping__address1--text shipping__text">Address 1</span>
+                <input type="text" class="shipping__address1--input">
+              </div>
+            </div>
+
+            <div class="shipping__line">
+              <div class="shipping__city">
+                <span class="shipping__city--text shipping__text">Your city</span>
+                <select name="city" class="shipping__city--input">              
+                  <option value="addis ababa">Addis Ababa</option>       
+                  <option selected value="california">California</option> 
+                  <option value="harare">Harare</option>           
+                  <option value="kiyv">Kiyv</option>   
+               </select>
+               <i class="fa fa-angle-down"></i>
+              </div>
+              <div class="shipping__code">
+                <span class="shipping__code--text shipping__text">ZIP Code</span>
+                <input type="text" class="shipping__code--input">
+              </div>
+              <div class="shipping__address2">
+                <span class="shipping__address2--text shipping__text">Address 2</span>
+                <input type="text" class="shipping__address2--input">
+              </div>
+            </div>
+          </form>
+
+          <form class="shipping__form shipping__form--info">
+            <span class="shipping__info">CONTACT INFO</span>
+            <div class="shipping__line">
+              <div class="shipping__name">
+                <span class="shipping__name--text shipping__text">Full name</span>
+                <input type="text" class="shipping__name--input">
+              </div>
+              <div class="shipping__email">
+                <span class="shipping__email--text shipping__text">E-mail</span>
+                <input type="email" class="shipping__email--input">
+              </div>
+              <div class="shipping__phone">
+                <span class="shipping__phone--text shipping__text">Phone</span>
+                <input type="text" class="shipping__phone--input">
+              </div>
+            </div>
+          </form>
+
+          <footer class="shipping__footer">
+              <span class="shipping__footer--continue shipping__text"><i class="fa fa-angle-left"></i>&nbsp;&nbsp;&nbsp;Return to Cart</span>
+              <button class="shipping__footer--btn shipping__text">Paynment method&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></button>
+           </footer>
+      </div>
+
+      <div class="wrapper paynment">
+          <span class="paynment__paynment">PAYNMENT METHOD</span>
+
+          <form class="paynment__form">
+              <section class="paynment__left">
+                <span class="paynment__credit--text paynment__text">Credit Card</span>
+                <div class="paynment__credit">
+                    <input type="text" class="paynment__credit--input">
+                    <input type="text" class="paynment__credit--input">
+                    <input type="text" class="paynment__credit--input">
+                    <input type="text" class="paynment__credit--input">
+                </div>
+
+                <span class="paynment__cardholder paynment__text">Cardholder Name</span>
+                    <input type="text" class="paynment__cardholder--input">
+
+                <span class="paynment__expire--text paynment__text">Expire</span>
+                <div class="paynment__expire">
+                  <label class="paynment__month">
+                    <select name="month" class="paynment__month--input">
+                        <option  selected hidden value="city">Month</option>                  
+                        <option value="january">January</option>        
+                        <option value="february">February</option>           
+                        <option value="march">March</option> 
+                        <option value="april">April</option>   
+                        <option value="may">May</option>   
+                        <option value="june">June</option>   
+                        <option value="july">July</option>   
+                        <option value="august">August</option>   
+                        <option value="september">September</option>   
+                        <option value="october">October</option>   
+                        <option value="november">November</option> 
+                        <option value="december">December</option>                         
+                     </select>
+                     <i class="fa fa-angle-down"></i>
+                  </label>
+
+                  <label class="paynment__year">
+                     <select name="city" class="paynment__year--input">
+                        <option  selected hidden value="city">Year</option>
+                        <option value="june">1995</option>   
+                        <option value="june">1996</option> 
+                     </select>
+                     <i class="fa fa-angle-down"></i>
+                  </label>
+                </div>
+
+                <span class="paynment__cvv--text paynment__text">CVV</span>
+                <input type="text" class="paynment__cvv--input">
+              </section>
+
+              <section class="paynment__right">
+                  <span class="paynment__billing--text">BILLING ADDRESS</span>
+                  <label class="paynment__address paynment__text">
+                      <input class="paynment__billing--checkbox" type="checkbox">Same as shipping address<i></i>
+                  </label>
+                  <p class="paynment__article paynment__text">A hundred thousand grateful loves to your dear papa and mamma. Is your poor 
+                    brother recovered of his rack-punch? Oh, dear! Oh, dear! How men should beware of wicked punch!</p>
+                  <div class="paynment__subtotal paynment__text">&#36;496</div>
+              </section>             
+          </form>     
+          <footer class="paynment__footer">
+              <span class="paynment__footer--continue paynment__text"><i class="fa fa-angle-left"></i>&nbsp;&nbsp;&nbsp;Edit Shipping Address</span>
+              <button class="paynment__footer--btn paynment__text">Place order&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></button>
+          </footer>     
+      </div>
+
+        <script src="js/script.js"></script>
   </body>
   <html>

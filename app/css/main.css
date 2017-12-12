@@ -834,7 +834,9 @@ table {
     width: 100%;
     -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap; } }
+            flex-wrap: nowrap; }
+  .subscribing__text {
+    margin-top: 100px; } }
 
 .contact {
   width: 65%;
