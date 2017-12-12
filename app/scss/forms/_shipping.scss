@@ -1,0 +1,107 @@
+.shipping {
+    @include sign(83.9%);
+
+    &__text {
+        font-family: $font-face;
+        font-size: 18px;
+        color: $grey-text;
+        vertical-align: middle;
+
+        &--main {
+            font-size: 16px;
+            color: $cart-text;
+            font-weight: normal;
+        }
+    }
+
+    &__shipping, &__info {
+        position: absolute;
+		top: 20px;
+		left: 25px;		
+		font-size: 20px;
+		font-family: $font-face;
+		font-weight: bold;
+    }
+
+    &__info {
+        top: -55px;
+    }
+
+    &__line {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 14px;
+        padding-top: 13px;
+    }
+    
+    &__form {
+        width: 100%;
+        position: relative;
+        margin-top: 70px;
+
+        &--info {
+            margin-top: 120px;
+        }
+    }        
+
+    &__region, &__code, &__address1, &__address2, &__country, &__city, &__name, &__email, &__phone {
+        width: 31%;
+
+        &--input{
+			@extend %input__form;
+			width: calc(100% - 10px);
+			padding: 0;
+			padding-left: 10px;
+			margin: 0;
+			color: black;			
+			margin-top: 11px;
+		}
+    }
+
+    &__country, &__city { 
+    
+        &--input {
+		background-color: $yellow;
+		color: white;
+		appearance: none;		
+		border: none;
+        }
+    }
+
+	&__country, &__city {		
+		position: relative;
+		i {
+			pointer-events: none;
+			position: absolute;
+			right: 10px;
+			top: 55%;
+			font-size: 20px;			
+			color: white;			
+		}
+    }
+    
+    &__footer {           
+        padding-top: 30px;
+        padding-bottom: 30px;     
+        width: 90%;
+        margin: 0 auto;    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--continue {
+            color: $blue-light;
+            font-weight: normal;
+        }
+
+        &--btn {
+            @include button($green, 240px);
+            font-weight: normal;
+            height: 48px;
+            color: white;
+        }
+    }
+}

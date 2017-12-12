@@ -1,0 +1,175 @@
+.paynment {
+    @include sign(83.9%);
+
+    &__text {
+        font-family: $font-face;
+        font-size: 18px;
+        color: $grey-text;
+        vertical-align: middle;
+
+        &--main {
+            font-size: 16px;
+            color: $cart-text;
+            font-weight: normal;
+        }
+    }
+
+    &__paynment, &__billing--text {
+        position: absolute;
+		top: 20px;
+		left: 25px;		
+		font-size: 20px;
+		font-family: $font-face;
+		font-weight: bold;
+    }
+
+    &__billing--text {
+        top: -45px;
+        left: 0;
+    }
+
+    &__left {
+        width: 37%;
+    }
+    
+    &__right {
+        width: 51%;
+        position: relative;
+    }
+
+    &__credit, &__cardholder, &__expire, &__cvv, &__month, &__year {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        
+                &--input{
+                    @extend %input__form;
+                    width: calc(100% - 10px);
+                    padding: 0;
+                    padding-left: 10px;
+                    margin: 0;
+                    color: black;			
+                    margin-top: 11px;
+                }
+    }
+
+    &__cardholder--input, &__credit, &__expire {        
+        margin-bottom: 30px;
+    }
+
+    &__credit--input {
+        width: 20%;
+    }
+
+    &__credit {
+        width: 101%;
+    }
+
+    &__month, &__year { 
+        width: 45%;
+        position: relative;	
+        i {
+            pointer-events: none;
+            position: absolute;
+            right: 10px;
+            top: 45%;
+            font-size: 20px;			
+            color: white;			
+        }	
+        
+            &--input {               
+           
+            background-color: $yellow;
+            color: white;
+            appearance: none;		
+            border: none;
+
+            }
+        }
+
+    &__form {
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 70px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__address {
+        width: 100%;
+        user-select: none;
+        margin-top: 14px;
+        font-style: $font-face;
+        font-size: 16px;
+        color: black;			  
+        float: left;
+        padding-left: 25px;			
+        display: inline-block;
+        position: relative;
+
+        i::before {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top: -2px;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 7px;
+            background-color: #24aa98;
+        }
+
+    }
+
+    &__article {
+        font-weight: normal;
+        font-size: 18px;
+        margin-top: 50px;
+        line-height: 1.3;
+    }
+
+    &__subtotal {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 24px;
+        color: black;
+    }
+    
+    &__billing--checkbox{
+         display: none;
+
+        &:checked + i:before {
+            content: '\2713';
+            color: white;
+            text-align: center;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 22px;
+        }
+            
+    }
+
+    &__footer {
+        padding-top: 30px;
+        padding-bottom: 30px;     
+        width: 90%;
+        margin: 0 auto;    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--continue {
+            color: $blue-light;
+            font-weight: normal;
+        }
+
+        &--btn {
+            @include button($green, 170px);
+            font-weight: normal;
+            height: 48px;
+            color: white;
+        }
+    }
+}

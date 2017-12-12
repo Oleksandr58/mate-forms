@@ -250,3 +250,14 @@
         margin-bottom: 17px; 
     }
 }
+
+@media (max-width: 1000px) { 
+	.wrapper__small, .smallup, .smallin, .wrapper__smallest {
+		display: block;
+		width: 100%;
+		flex-wrap: nowrap;
+	}
+    .subscribing__text {
+        margin-top: 100px;
+    }
+}

@@ -10,7 +10,6 @@
 }
 
 .signup {
-	flex-basis: 530px;
 	@include sign(46.8%);
 	&__header {		
 		background-image: url(../img/Sign_Up_Form.jpg);
@@ -30,7 +29,6 @@
 }
 
 .signin {
-	flex-basis: 530px;
 	@include sign(46.8%);
 	&__header {
 		background-image: url(../img/Sign_In_Form.jpg);
@@ -47,4 +45,13 @@
 	}
 
 	@include form(signin, 86%);
+}
+
+@media (max-width: 550px) { 
+	.sign__big {
+		display: block;
+		width: 100%;
+		flex-wrap: nowrap;
+	}
+
 }

@@ -8,9 +8,9 @@
   </head>
   
   <body>
-    <div class="wrapper sign_big">
+    <div class="wrapper sign__big">
     
-      <section class="sign_big signup">
+      <section class="sign__big signup">
         <header class="signup__header">
           <a class="signup__header--registered">Already Registered?</a>
           <a class="signup__header--signup">SIGN UP</a>
@@ -28,7 +28,7 @@
         </form>
       </section>
 
-      <section class="sign_big signin">
+      <section class="sign__big signin">
           <header class="signin__header">
             <a class="signin__header--registered">Create an Account?</a>
             <a class="signin__header--signin">SIGN IN</a>
@@ -147,10 +147,9 @@
                   <div class="contact__budget">
                       <span class="contact__budget--text contact__text">Select Budget</span>
                       <select name="budget" class="contact__budget--input">
-                        <option  selected hidden value="budget">Your budget</option>
                         <option value="0-5000">&#36;0 - &#36;5.000</option>
                         <option value="5000-10000">&#36;5.000 - &#36;10.000</option>
-                        <optionvalue="10000-15000">&#36;10.000 - &#36;15.000</option>
+                        <option selected value="10000-15000">&#36;10.000 - &#36;15.000</option>
                         <option value="15000-20000">&#36;15.000 - &#36;20.000</option>                        
                      </select>
                      <i class="fa fa-angle-down"></i>
@@ -221,7 +220,7 @@
                     <span class="cart__form--caption">Color :</span>
                       <label class="cart__form--color">
                         <label><input class="cart__form--yellow" name="item-color"  type="checkbox"><i class="cart__color--yellow"></i></label>
-                        <label><input class="cart__form--blue" name="item-color" type="checkbox"><i class="cart__color--blue"></i></label>
+                        <label><input checked class="cart__form--blue" name="item-color" type="checkbox"><i class="cart__color--blue"></i></label>
                         <label><input class="cart__form--green" name="item-color"  type="checkbox"><i class="cart__color--green"></i></label>
                         <label><input class="cart__form--red" name="item-color" type="checkbox"><i class="cart__color--red"></i></label>
                         <label><input class="cart__form--black" name="item-color"  type="checkbox"><i class="cart__color--black"></i></label>
@@ -244,11 +243,22 @@
                   <figcaption class="cart__item--caption">
                     <span class="cart__item--product">Leather shoes</span>
                     <form class="cart__form">                      
-                    <span class="cart__form--caption">Color :</span>
-                      <label class="cart__form--color">
-                            <label><input class="cart__form--brown" name="item-color"  type="checkbox"><i class="cart__color--brown"></i></label>
-                            <label><input class="cart__form--black" name="item-color" type="checkbox"><i class="cart__color--black shoes__color--brown"></i></label>
-                      </label>
+                      <span class="cart__form--caption">Color :</span>
+                        <label class="cart__form--color">
+                              <label><input checked class="cart__form--brown" name="item-color"  type="checkbox">
+                                <i class="cart__color--brown"></i>
+                              </label>
+                              <label><input class="cart__form--black" name="item-color" type="checkbox">
+                                <i class="cart__color--black shoes__color--brown"></i>
+                              </label>
+                        </label>
+                      <span class="cart__form--size">Size :</span>
+                      <select name="size" class="cart__form--select">
+                          <option  value="40">40</option>
+                          <option selected value="42">42</option>
+                          <option value="44">44</option>
+                          <option value="46">46</option>                       
+                       </select>
                     </form>
                   </figcaption>
                 </figure>
@@ -270,6 +280,144 @@
                <button class="cart__footer--btn cart__text">Order&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></button>
             </footer>
         </div>
+
+        <div class="wrapper shipping">
+          <span class="shipping__shipping">SHIPPING ADDRESS</span>
+
+          <form class="shipping__form">
+            <div class="shipping__line">
+              <div class="shipping__country">
+                <span class="shipping__country--text shipping__text">Select country</span>
+                <select name="country" class="shipping__country--input">
+                  <option value="zimbabwe">Zimbabwe</option>
+                  <option value="ethiopia">Ethiopia</option>      
+                  <option value="ukraine">Ukraine</option>    
+                  <option selected value="usa">USA</option>             
+               </select>
+               <i class="fa fa-angle-down"></i>
+              </div>
+              <div class="shipping__region">
+                <span class="shipping__region--text shipping__text">State, Region, Province</span>
+                <input type="text" class="shipping__region--input">
+              </div>
+              <div class="shipping__address1">
+                <span class="shipping__address1--text shipping__text">Address 1</span>
+                <input type="text" class="shipping__address1--input">
+              </div>
+            </div>
+
+            <div class="shipping__line">
+              <div class="shipping__city">
+                <span class="shipping__city--text shipping__text">Your city</span>
+                <select name="city" class="shipping__city--input">              
+                  <option value="addis ababa">Addis Ababa</option>       
+                  <option selected value="california">California</option> 
+                  <option value="harare">Harare</option>           
+                  <option value="kiyv">Kiyv</option>   
+               </select>
+               <i class="fa fa-angle-down"></i>
+              </div>
+              <div class="shipping__code">
+                <span class="shipping__code--text shipping__text">ZIP Code</span>
+                <input type="text" class="shipping__code--input">
+              </div>
+              <div class="shipping__address2">
+                <span class="shipping__address2--text shipping__text">Address 2</span>
+                <input type="text" class="shipping__address2--input">
+              </div>
+            </div>
+          </form>
+
+          <form class="shipping__form shipping__form--info">
+            <span class="shipping__info">CONTACT INFO</span>
+            <div class="shipping__line">
+              <div class="shipping__name">
+                <span class="shipping__name--text shipping__text">Full name</span>
+                <input type="text" class="shipping__name--input">
+              </div>
+              <div class="shipping__email">
+                <span class="shipping__email--text shipping__text">E-mail</span>
+                <input type="email" class="shipping__email--input">
+              </div>
+              <div class="shipping__phone">
+                <span class="shipping__phone--text shipping__text">Phone</span>
+                <input type="text" class="shipping__phone--input">
+              </div>
+            </div>
+          </form>
+
+          <footer class="shipping__footer">
+              <span class="shipping__footer--continue shipping__text"><i class="fa fa-angle-left"></i>&nbsp;&nbsp;&nbsp;Return to Cart</span>
+              <button class="shipping__footer--btn shipping__text">Paynment method&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></button>
+           </footer>
+      </div>
+
+      <div class="wrapper paynment">
+          <span class="paynment__paynment">PAYNMENT METHOD</span>
+
+          <form class="paynment__form">
+              <section class="paynment__left">
+                <span class="paynment__credit--text paynment__text">Credit Card</span>
+                <div class="paynment__credit">
+                    <input type="text" class="paynment__credit--input">
+                    <input type="text" class="paynment__credit--input">
+                    <input type="text" class="paynment__credit--input">
+                    <input type="text" class="paynment__credit--input">
+                </div>
+
+                <span class="paynment__cardholder paynment__text">Cardholder Name</span>
+                    <input type="text" class="paynment__cardholder--input">
+
+                <span class="paynment__expire--text paynment__text">Expire</span>
+                <div class="paynment__expire">
+                  <label class="paynment__month">
+                    <select name="month" class="paynment__month--input">
+                        <option  selected hidden value="city">Month</option>                  
+                        <option value="january">January</option>        
+                        <option value="february">February</option>           
+                        <option value="march">March</option> 
+                        <option value="april">April</option>   
+                        <option value="may">May</option>   
+                        <option value="june">June</option>   
+                        <option value="july">July</option>   
+                        <option value="august">August</option>   
+                        <option value="september">September</option>   
+                        <option value="october">October</option>   
+                        <option value="november">November</option> 
+                        <option value="december">December</option>                         
+                     </select>
+                     <i class="fa fa-angle-down"></i>
+                  </label>
+
+                  <label class="paynment__year">
+                     <select name="city" class="paynment__year--input">
+                        <option  selected hidden value="city">Year</option>
+                        <option value="june">1995</option>   
+                        <option value="june">1996</option> 
+                     </select>
+                     <i class="fa fa-angle-down"></i>
+                  </label>
+                </div>
+
+                <span class="paynment__cvv--text paynment__text">CVV</span>
+                <input type="text" class="paynment__cvv--input">
+              </section>
+
+              <section class="paynment__right">
+                  <span class="paynment__billing--text">BILLING ADDRESS</span>
+                  <label class="paynment__address paynment__text">
+                      <input class="paynment__billing--checkbox" type="checkbox">Same as shipping address<i></i>
+                  </label>
+                  <p class="paynment__article paynment__text">A hundred thousand grateful loves to your dear papa and mamma. Is your poor 
+                    brother recovered of his rack-punch? Oh, dear! Oh, dear! How men should beware of wicked punch!</p>
+                  <div class="paynment__subtotal paynment__text">&#36;496</div>
+              </section>             
+          </form>     
+          <footer class="paynment__footer">
+              <span class="paynment__footer--continue paynment__text"><i class="fa fa-angle-left"></i>&nbsp;&nbsp;&nbsp;Edit Shipping Address</span>
+              <button class="paynment__footer--btn paynment__text">Place order&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></button>
+          </footer>     
+      </div>
 
         <script src="js/script.js"></script>
   </body>

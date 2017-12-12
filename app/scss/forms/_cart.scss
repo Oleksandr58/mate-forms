@@ -5,7 +5,7 @@
         font-family: $font-face;
         font-size: 18px;
         color: black;
-        font-weight: bold;
+        font-weight: normal;
         vertical-align: middle;
 
         &--main {
@@ -188,9 +188,26 @@
             }
         }
         
-        &--caption {
+        &--caption, &--size {
             color: $cart-text;
             font-size: 16px;
+        }
+
+        &--size {
+            padding-left: 85px;
+        }
+
+        &--select {
+            padding-left: 5px;
+            padding-right: 3px;
+            border-radius: 4px;
+            text-align: center;
+            border: none;
+            background-color: $grey-text;
+            color: white;
+            appearance: none;
+            font-family: $font-face;
+            user-select: none;
         }
 
     }
@@ -200,7 +217,7 @@
         text-align: left;
     }
     &__quantity {
-        flex-basis: 78px;
+        flex-basis: 120px;
         text-align: center;
 
         &--minus {
@@ -214,13 +231,13 @@
         }
         &--sum {
             display: inline-block;
-            width: 18px;
+            width: 30px;
             padding-bottom: 5px;
         }
     }
 
     &__total {
-        flex-basis: 30px;
+        flex-basis: 80px;
         text-align: right;
     }
 
@@ -230,7 +247,7 @@
         display: flex;
         justify-content: flex-end;
         padding-left: 60px;
-        padding-right: 100px;
+        padding-right: 120px;
         padding-bottom: 14px;
         padding-top: 26px;
         position: relative;
@@ -256,6 +273,7 @@
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
+        align-content: center;
 
         &--continue {
             color: $blue-light;
@@ -264,6 +282,7 @@
 
         &--btn {
             @include button($green, 157px);
+            font-weight: normal;
             height: 48px;
             color: white;
         }
