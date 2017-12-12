@@ -1,1 +1,1 @@
-[mate-forms](https://oleksandr58.github.io/mate-forms/app/index.html)
+[mate-forms](https://oleksandr58.github.io/mate-forms/dist/index.html)
