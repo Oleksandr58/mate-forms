@@ -334,6 +334,17 @@
             }
         }
 
+        &__quantity {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100px;
+
+            &--main {
+                padding-top: 45px;
+                flex-basis: 80px;
+            }
+        }
+
         &__form {
                 
             &--size {
