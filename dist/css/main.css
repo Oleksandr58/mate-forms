@@ -1357,6 +1357,24 @@ table {
     text-align: center; }
     .cart__item--main, .cart__price--main, .cart__quantity--main, .cart__total--main {
       padding-top: 15px; }
+  .cart__quantity {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-flex-basis: 100px;
+        -ms-flex-preferred-size: 100px;
+            flex-basis: 100px; }
+    .cart__quantity--main {
+      padding-top: 45px;
+      -webkit-flex-basis: 80px;
+          -ms-flex-preferred-size: 80px;
+              flex-basis: 80px; }
   .cart__form--size {
     padding: 0;
     padding-top: 70px;
