@@ -26,7 +26,7 @@
 	}  
 
 	&__name, &__email, &__subject, &__budget {
-		width: 270px;
+		width: 40.2%;
 	}
 
 	&__name, &__email, &__subject, &__budget, &__message {
@@ -51,15 +51,14 @@
 		i {
 			pointer-events: none;
 			position: absolute;
-			right: 10px;
-			top: 55%;
+			right: 4%;
+			top: 52%;
 			font-size: 20px;			
 			color: white;			
 		}
 	}
 	&__message--input {
 		padding-top: 10px;
-		width: 100%;
 		height: 132px;
 		margin-bottom: 26px;
 	}
@@ -108,27 +107,85 @@
 			}			
 		}
 	}
+
 	&__btn {
 		@include button($green, 135px);
-		float: right;
 		margin-bottom: 26px;
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: space-between;
 	}
 }
 
 .minicontact {
 	@include sign(30.2%);
+	position: relative;
+
+	&__contact {
+		position: absolute;
+		top: 20px;
+		left: 25px;		
+		font-size: 20px;
+		font-family: $font-face;
+		font-weight: bold;
+	}  
 
 	&__form {
 		width: 79%;
 		margin: 0 auto;
 	}
+
 	&__message--input {
-		width: 260px;
+		width: calc(100% - 10px);
 	}
+
 	&__name {
 		margin-top: 67px;
 	}
+	
 	&__name, &__email {
 		margin-bottom: 26px;
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+@media (max-width: 850px) {
+	.contacts {
+		flex-wrap: nowrap;
+		display: block;
+	}
+
+	.contact, .minicontact {
+		width: 100%;
+	}
+
+	.contact, .minicontact {
+		&__form {
+			padding-top: 18px;
+		}
+	}
+	
+	.minicontact {
+		margin-top: 30px;
+	}
+}
+
+@media (max-width: 550px) {
+    .contacts {
+		width: 100%;
+	}	
+	.contact {
+		&__personal, &__other {
+			flex-direction: column;
+		}
+		&__name, &__email, &__subject, &__budget {
+			width: 100%;
+		}
 	}
 }

@@ -105,7 +105,7 @@
                 left: calc(33px + 3 * 25px);
             }
 
-            .shoes__color--brown:before {
+            .shoes__color--black:before {
                 left: 33px;
             }
         }
@@ -285,6 +285,126 @@
             font-weight: normal;
             height: 48px;
             color: white;
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .cart {
+        &__line {
+        flex-direction: column;
+        width: 20%;
+        padding: 0;
+        margin: 0;
+        margin-top: 60px;
+        }
+
+        &__item {
+            text-align: center;
+            width: 100%;
+            flex-direction: column;
+            padding: 0;
+            flex-basis: 280px;
+
+            &--photo, &--product {
+                width: 100%;
+                font-size: 16px;
+            }
+
+            &--main {
+                padding-top: 15px;
+                flex-basis: calc(280px - 15px);
+            }
+        }
+
+        &__main {
+            padding: 0;
+        }
+
+        &__price, &__quantity, &__total {
+            flex-basis: 50px;
+        }
+
+        &__item, &__price, &__quantity, &__total {
+            display: block;
+            text-align: center;
+
+            &--main {
+                padding-top: 15px;
+            }
+        }
+
+        &__form {
+                
+            &--size {
+                padding: 0;
+                padding-top: 70px;
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+
+            &--color, &--shoes {
+                display: block;
+                width: 100%;
+                text-align: center;
+                position: relative;
+
+                i::before {
+                    top: 10px;
+                    left: 45%;
+                }
+    
+                .cart__color--yellow:before {        
+                    background-color: $item-yellow;
+                }
+                
+                .cart__color--blue:before {        
+                    background-color: $item-blue;
+                    top: 35px;
+                    left: 45%;
+                }
+    
+                .cart__color--green:before {        
+                    background-color: $item-green;
+                    top: calc(35px + 25px);
+                    left: 45%;
+                }
+    
+                .cart__color--red:before {        
+                    background-color: $item-red;
+                    top: calc(35px + 2 * 25px);
+                    left: 45%;
+                }
+    
+                .cart__color--brown:before {        
+                    background-color: $item-brown;
+                    left: 45%;
+                    top: 10px;
+                }
+    
+                .cart__color--black:before {        
+                    background-color: $item-black;
+                    top: calc(35px + 3 * 25px);
+                    left: 45%;
+                }
+    
+                .shoes__color--black:before {
+                    top: 35px;
+                    left: 45%;
+                }
+            }
+        }
+            
+    }
+}
+
+@media (max-width: 550px) {
+    .cart {
+        width: 100%;
+
+        &__footer {
+            padding-left: 20px;
         }
     }
 }

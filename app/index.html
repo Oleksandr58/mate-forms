@@ -125,7 +125,7 @@
             </div>
           </div>
 
-            <div class="wrapper">
+            <div class="wrapper contacts">
               <section class="contact">
                 <span class="contact__contact">CONTACT</span>
                 <form class="contact__form">
@@ -159,14 +159,17 @@
                       <span class="contact__message--text contact__text">Message</span>
                       <textarea name="message" class="contact__message--input"></textarea>
                   </div>
-                  <label class="contact__copy">
-                      <input class="contact__copy--checkbox" type="checkbox">Send me a copy<i></i>
-                  </label>
-                  <button class="contact__btn">Send</button>
+                  <footer class="contact__footer">
+                    <label class="contact__copy">
+                        <input class="contact__copy--checkbox" type="checkbox">Send me a copy<i></i>
+                    </label>
+                    <button class="contact__btn">Send</button>
+                  </footer>
                 </form>
               </section>
 
               <section class="minicontact">
+                <span class="minicontact__contact">CONTACT</span>
                 <form class="minicontact__form">
                   <div class="minicontact__name">
                       <span class="contact__name--text contact__text">Name</span>
@@ -180,7 +183,9 @@
                         <span class="contact__message--text contact__text">Message</span>
                         <textarea name="message" class="contact__message--input minicontact__message--input"></textarea>
                   </div>
-                  <button class="contact__btn">Send</button>
+                  <footer class="minicontact__footer">
+                    <button class="contact__btn">Send</button>
+                  </footer>
                 </form>
               </section>
         </div>
@@ -190,9 +195,9 @@
 
             <div class="cart__line cart__main">
               <div class="cart__item cart__item--main cart__text--main">Item</div>
-              <div class="cart__price cart__text--main">Price</div>
-              <div class="cart__quantity cart__text--main">Quantity</div>
-              <div class="cart__total cart__text--main">Total</div>
+              <div class="cart__price cart__price--main cart__text--main">Price</div>
+              <div class="cart__quantity cart__quantity--main cart__text--main">Quantity</div>
+              <div class="cart__total cart__total--main cart__text--main">Total</div>
             </div>
 
             <div class="cart__line cart__line--bag">
@@ -249,7 +254,7 @@
                                 <i class="cart__color--brown"></i>
                               </label>
                               <label><input class="cart__form--black" name="item-color" type="checkbox">
-                                <i class="cart__color--black shoes__color--brown"></i>
+                                <i class="cart__color--black shoes__color--black"></i>
                               </label>
                         </label>
                       <span class="cart__form--size">Size :</span>

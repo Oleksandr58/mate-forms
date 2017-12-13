@@ -105,3 +105,22 @@
         }
     }
 }
+
+@media (max-width: 750px) { 
+    .shipping {    
+        &__line {
+        flex-direction: column;
+        }
+        
+        &__region, &__code, &__address1, &__address2, &__country, &__city, &__name, &__email, &__phone {
+            width: 100%;
+            padding-top: 10px;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .shipping {
+        width: 100%;
+    }
+}

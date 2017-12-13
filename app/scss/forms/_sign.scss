@@ -52,6 +52,18 @@
 		display: block;
 		width: 100%;
 		flex-wrap: nowrap;
+		margin-right: 0;  
+	}
+
+	.signup, .signin {
+		&__form {
+			padding-bottom: 40px;
+		}
+	}
+
+	.signin {
+		margin-top: 40px;
 	}
 
 }
+

@@ -254,10 +254,24 @@
 @media (max-width: 1000px) { 
 	.wrapper__small, .smallup, .smallin, .wrapper__smallest {
 		display: block;
-		width: 100%;
-		flex-wrap: nowrap;
-	}
+		width: 83.9%;
+        flex-wrap: nowrap; 
+        margin-right: 0;       
+    }
     .subscribing__text {
         margin-top: 100px;
+    }
+    .wrapper__smallest {
+        display: block;
+    }
+}
+
+@media (max-width: 550px) {
+    .wrapper__small, .smallup, .smallin, .wrapper__smallest {
+		width: 100%;
+    }
+
+    .subscribing__text {
+        padding-top: 40px;
     }
 }

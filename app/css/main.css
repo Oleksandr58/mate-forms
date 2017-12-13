@@ -386,7 +386,12 @@ table {
     width: 100%;
     -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap; } }
+            flex-wrap: nowrap;
+    margin-right: 0; }
+  .signup__form, .signin__form {
+    padding-bottom: 40px; }
+  .signin {
+    margin-top: 40px; } }
 
 .wrapper__small {
   margin: 0 auto;
@@ -831,12 +836,21 @@ table {
 @media (max-width: 1000px) {
   .wrapper__small, .smallup, .smallin, .wrapper__smallest {
     display: block;
-    width: 100%;
+    width: 83.9%;
     -webkit-flex-wrap: nowrap;
         -ms-flex-wrap: nowrap;
-            flex-wrap: nowrap; }
+            flex-wrap: nowrap;
+    margin-right: 0; }
   .subscribing__text {
-    margin-top: 100px; } }
+    margin-top: 100px; }
+  .wrapper__smallest {
+    display: block; } }
+
+@media (max-width: 550px) {
+  .wrapper__small, .smallup, .smallin, .wrapper__smallest {
+    width: 100%; }
+  .subscribing__text {
+    padding-top: 40px; } }
 
 .contact {
   width: 65%;
@@ -868,7 +882,7 @@ table {
     font-family: Cabin;
     font-weight: bold; }
   .contact__name, .contact__email, .contact__subject, .contact__budget {
-    width: 270px; }
+    width: 40.2%; }
   .contact__name--input, .contact__email--input, .contact__subject--input, .contact__budget--input, .contact__message--input {
     width: -webkit-calc(100% - 10px);
     width: calc(100% - 10px);
@@ -889,13 +903,12 @@ table {
     .contact__budget i {
       pointer-events: none;
       position: absolute;
-      right: 10px;
-      top: 55%;
+      right: 4%;
+      top: 52%;
       font-size: 20px;
       color: white; }
   .contact__message--input {
     padding-top: 10px;
-    width: 100%;
     height: 132px;
     margin-bottom: 26px; }
   .contact__text {
@@ -951,23 +964,74 @@ table {
     font-style: Cabin;
     font-size: 20px;
     outline: none;
-    float: right;
     margin-bottom: 26px; }
+  .contact__footer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
 
 .minicontact {
   width: 30.2%;
   background-color: #f2f5f8;
   -webkit-border-radius: 6px;
-          border-radius: 6px; }
+          border-radius: 6px;
+  position: relative; }
+  .minicontact__contact {
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    font-size: 20px;
+    font-family: Cabin;
+    font-weight: bold; }
   .minicontact__form {
     width: 79%;
     margin: 0 auto; }
   .minicontact__message--input {
-    width: 260px; }
+    width: -webkit-calc(100% - 10px);
+    width: calc(100% - 10px); }
   .minicontact__name {
     margin-top: 67px; }
   .minicontact__name, .minicontact__email {
     margin-bottom: 26px; }
+  .minicontact__footer {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+
+@media (max-width: 850px) {
+  .contacts {
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    display: block; }
+  .contact, .minicontact {
+    width: 100%; }
+  .contact__form, .minicontact__form {
+    padding-top: 18px; }
+  .minicontact {
+    margin-top: 30px; } }
+
+@media (max-width: 550px) {
+  .contacts {
+    width: 100%; }
+  .contact__personal, .contact__other {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .contact__name, .contact__email, .contact__subject, .contact__budget {
+    width: 100%; } }
 
 .cart {
   width: 83.9%;
@@ -1071,7 +1135,7 @@ table {
         background-color: #383737;
         left: -webkit-calc(33px + 3 * 25px);
         left: calc(33px + 3 * 25px); }
-      .cart__form--color .shoes__color--brown:before {
+      .cart__form--color .shoes__color--black:before {
         left: 33px; }
     .cart__form--yellow {
       display: none; }
@@ -1251,6 +1315,97 @@ table {
       height: 48px;
       color: white; }
 
+@media (max-width: 720px) {
+  .cart__line {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 20%;
+    padding: 0;
+    margin: 0;
+    margin-top: 60px; }
+  .cart__item {
+    text-align: center;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    -webkit-flex-basis: 280px;
+        -ms-flex-preferred-size: 280px;
+            flex-basis: 280px; }
+    .cart__item--photo, .cart__item--product {
+      width: 100%;
+      font-size: 16px; }
+    .cart__item--main {
+      padding-top: 15px;
+      -webkit-flex-basis: -webkit-calc(280px - 15px);
+          -ms-flex-preferred-size: calc(280px - 15px);
+              flex-basis: calc(280px - 15px); }
+  .cart__main {
+    padding: 0; }
+  .cart__price, .cart__quantity, .cart__total {
+    -webkit-flex-basis: 50px;
+        -ms-flex-preferred-size: 50px;
+            flex-basis: 50px; }
+  .cart__item, .cart__price, .cart__quantity, .cart__total {
+    display: block;
+    text-align: center; }
+    .cart__item--main, .cart__price--main, .cart__quantity--main, .cart__total--main {
+      padding-top: 15px; }
+  .cart__form--size {
+    padding: 0;
+    padding-top: 70px;
+    display: block;
+    width: 100%;
+    text-align: center; }
+  .cart__form--color, .cart__form--shoes {
+    display: block;
+    width: 100%;
+    text-align: center;
+    position: relative; }
+    .cart__form--color i::before, .cart__form--shoes i::before {
+      top: 10px;
+      left: 45%; }
+    .cart__form--color .cart__color--yellow:before, .cart__form--shoes .cart__color--yellow:before {
+      background-color: #d9c26c; }
+    .cart__form--color .cart__color--blue:before, .cart__form--shoes .cart__color--blue:before {
+      background-color: #65abd0;
+      top: 35px;
+      left: 45%; }
+    .cart__form--color .cart__color--green:before, .cart__form--shoes .cart__color--green:before {
+      background-color: #24aa98;
+      top: -webkit-calc(35px + 25px);
+      top: calc(35px + 25px);
+      left: 45%; }
+    .cart__form--color .cart__color--red:before, .cart__form--shoes .cart__color--red:before {
+      background-color: #db7560;
+      top: -webkit-calc(35px + 2 * 25px);
+      top: calc(35px + 2 * 25px);
+      left: 45%; }
+    .cart__form--color .cart__color--brown:before, .cart__form--shoes .cart__color--brown:before {
+      background-color: #865447;
+      left: 45%;
+      top: 10px; }
+    .cart__form--color .cart__color--black:before, .cart__form--shoes .cart__color--black:before {
+      background-color: #383737;
+      top: -webkit-calc(35px + 3 * 25px);
+      top: calc(35px + 3 * 25px);
+      left: 45%; }
+    .cart__form--color .shoes__color--black:before, .cart__form--shoes .shoes__color--black:before {
+      top: 35px;
+      left: 45%; } }
+
+@media (max-width: 550px) {
+  .cart {
+    width: 100%; }
+    .cart__footer {
+      padding-left: 20px; } }
+
 .shipping {
   width: 83.9%;
   background-color: #f2f5f8;
@@ -1357,6 +1512,21 @@ table {
       font-weight: normal;
       height: 48px;
       color: white; }
+
+@media (max-width: 750px) {
+  .shipping__line {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .shipping__region, .shipping__code, .shipping__address1, .shipping__address2, .shipping__country, .shipping__city, .shipping__name, .shipping__email, .shipping__phone {
+    width: 100%;
+    padding-top: 10px; } }
+
+@media (max-width: 550px) {
+  .shipping {
+    width: 100%; } }
 
 .paynment {
   width: 83.9%;
@@ -1520,3 +1690,15 @@ table {
       font-weight: normal;
       height: 48px;
       color: white; }
+
+@media (max-width: 660px) {
+  .paynment__form {
+    display: block; }
+  .paynment__left, .paynment__right {
+    width: 100%; }
+  .paynment__article {
+    padding-bottom: 50px; } }
+
+@media (max-width: 550px) {
+  .paynment {
+    width: 100%; } }
